@@ -1,0 +1,30 @@
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:name="background"
+      android:fillColor="@color/colorPrimary"
+      android:pathData="M12,12m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0" />
+  <path
+      android:pathData="M11.47,2.152C11.7943,1.9493 12.2057,1.9493 12.53,2.152L20.53,7.152C20.8224,7.3347 21,7.6552 21,8V16C21,16.3448 20.8224,16.6653 20.53,16.848L12.53,21.848C12.2057,22.0507 11.7943,22.0507 11.47,21.848L3.47,16.848C3.1776,16.6653 3,16.3448 3,16V8C3,7.6552 3.1776,7.3347 3.47,7.152L6.123,5.4939L15.0007,11.058V13.9981C15.0007,14.5504 15.4484,14.9981 16.0007,14.9981C16.553,14.9981 17.0007,14.5504 17.0007,13.9981V10.5045C17.0007,10.1602 16.8236,9.8401 16.5318,9.6572L8.0086,4.3154L11.47,2.152ZM7.148,13.9674C7.4407,13.4991 8.0576,13.3567 8.526,13.6495L10.5347,14.9049C11.003,15.1976 11.1454,15.8146 10.8527,16.2829C10.56,16.7512 9.943,16.8936 9.4747,16.6009L7.466,15.3454C6.9977,15.0527 6.8553,14.4358 7.148,13.9674Z"
+      android:fillColor="#9dd3f9"
+      android:fillType="evenOdd"/>
+</vector>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.gs.erp.sap.demo.databinding.simplepropertyformcell.Converter"/>
+        <import type="android.view.View"/>
+        <variable name="salesOrderItem" type="com.sap.cloud.android.odata.com_sap_mbtepmdemoservice.SalesOrderItem"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+        <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_update_salesorderitem"
+                    android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemnumberid"
+                        android:tag="ItemNumber"
+                        app:key="ItemNumber"
+                        app:value="@={Converter.toString(itemnumberid, salesOrderItem.itemNumber, salesOrderItem.itemNumber)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/salesorderidid"
+                        android:tag="SalesOrderID"
+                        android:maxLength="@{10}"
+                        app:key="SalesOrderID"
+                        app:value="@={Converter.toString(salesorderidid, salesOrderItem.salesOrderID, salesOrderItem.salesOrderID)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/macid"
+                        android:tag="MAC"
+                        android:maxLength="@{48}"
+                        app:key="Mac"
+                        app:value="@={salesOrderItem.mac}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ctnid"
+                        android:tag="CTN"
+                        android:maxLength="@{48}"
+                        app:key="Ctn"
+                        app:value="@={salesOrderItem.ctn}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/currencycodeid"
+                        android:tag="CurrencyCode"
+                        android:maxLength="@{5}"
+                        app:key="CurrencyCode"
+                        app:value="@={salesOrderItem.currencyCode}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deliverydateid"
+                        android:tag="DeliveryDate"
+                        app:key="DeliveryDate"
+                        app:value="@={Converter.toString(deliverydateid, salesOrderItem.deliveryDate, salesOrderItem.deliveryDate)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/grossamountid"
+                        android:tag="GrossAmount"
+                        app:key="GrossAmount"
+                        app:value="@={Converter.toString(grossamountid, salesOrderItem.grossAmount, salesOrderItem.grossAmount)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/netamountid"
+                        android:tag="NetAmount"
+                        app:key="NetAmount"
+                        app:value="@={Converter.toString(netamountid, salesOrderItem.netAmount, salesOrderItem.netAmount)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/productidid"
+                        android:tag="ProductID"
+                        android:maxLength="@{10}"
+                        app:key="ProductID"
+                        app:value="@={Converter.toString(productidid, salesOrderItem.productID, salesOrderItem.productID)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/quantityid"
+                        android:tag="Quantity"
+                        app:key="Quantity"
+                        app:value="@={Converter.toString(quantityid, salesOrderItem.quantity, salesOrderItem.quantity)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/quantityunitid"
+                        android:tag="QuantityUnit"
+                        android:maxLength="@{3}"
+                        app:key="QuantityUnit"
+                        app:value="@={salesOrderItem.quantityUnit}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/taxamountid"
+                        android:tag="TaxAmount"
+                        app:key="TaxAmount"
+                        app:value="@={Converter.toString(taxamountid, salesOrderItem.taxAmount, salesOrderItem.taxAmount)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

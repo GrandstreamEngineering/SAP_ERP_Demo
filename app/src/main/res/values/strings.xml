@@ -1,0 +1,40 @@
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources  xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="MissingTranslation" >
+    <string name="application_name">GsSAPdemo</string>
+    <string name="eset_customers">Customers</string>
+    <string name="eset_customers_single">Customer</string>
+    <string name="eset_productcategories">ProductCategories</string>
+    <string name="eset_productcategories_single">ProductCategory</string>
+    <string name="eset_producttexts">ProductTexts</string>
+    <string name="eset_producttexts_single">ProductText</string>
+    <string name="eset_products">Products</string>
+    <string name="eset_products_single">Product</string>
+    <string name="eset_purchaseorderheaders">PurchaseOrderHeaders</string>
+    <string name="eset_purchaseorderheaders_single">PurchaseOrderHeader</string>
+    <string name="eset_purchaseorderitems">PurchaseOrderItems</string>
+    <string name="eset_purchaseorderitems_single">PurchaseOrderItem</string>
+    <string name="eset_salesorderheaders">SalesOrders</string>
+    <string name="eset_salesorderheaders_single">SalesOrder</string>
+    <string name="eset_salesorderitems">SalesOrderItems</string>
+    <string name="eset_salesorderitems_single">SalesOrderItem</string>
+    <string name="eset_stock">Stock</string>
+    <string name="eset_stock_single">Stock</string>
+    <string name="eset_suppliers">Suppliers</string>
+    <string name="eset_suppliers_single">Supplier</string>
+</resources>

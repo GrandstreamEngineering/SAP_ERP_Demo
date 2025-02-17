@@ -1,0 +1,77 @@
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="FioriTheme.Onboarding">
+        <!-- Customize your theme here. -->
+        <item name="objectCellStyle">@style/TestObjectCell</item>
+        <item name="alertDialogTheme">@style/AlertDialogStyle</item>
+        <item name="android:statusBarColor">@color/sap_ui_background_color</item>
+        <item name="android:textColor">?attr/sap_fiori_color_t1</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.Transparent" parent="AppTheme.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="FioriTheme.AppBarOverlay" />
+
+    <style name="AppTheme.PopupOverlay" parent="FioriTheme.PopupOverlay">
+        <item name="android:colorBackground">?attr/sap_fiori_color_s1</item>
+        <item name="colorSurface">?attr/sap_fiori_color_s1</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="splashScreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_centered</item>
+    </style>
+
+    <style name="ContextActionMode" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/colorPrimary</item>
+    </style>
+
+    <style name="TestObjectCell" parent="ObjectCell">
+        <item name="headlineTextAppearance">@style/Test.ObjectCell.Headline</item>
+    </style>
+
+    <style name="Test.ObjectCell.Headline" parent="TextAppearance.Fiori.ObjectCell.Headline">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="OnboardingDefaultTheme.Dialog.Alert" >
+        <item name="android:maxLines">8</item>
+        <item name="android:colorBackground">@color/sap_ui_background_color</item>
+        <item name="android:elevation">15dp</item>
+    </style>
+
+    <style name="ToolBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:colorControlNormal">@color/colorWhite</item>
+    </style>
+
+</resources>

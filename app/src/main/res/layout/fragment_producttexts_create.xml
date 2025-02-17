@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.gs.erp.sap.demo.databinding.simplepropertyformcell.Converter"/>
+        <import type="android.view.View"/>
+        <variable name="productText" type="com.sap.cloud.android.odata.com_sap_mbtepmdemoservice.ProductText"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+        <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_update_producttext"
+                    android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/languageid"
+                        android:tag="Language"
+                        android:maxLength="@{2}"
+                        app:key="Language"
+                        app:value="@={productText.language}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/longdescriptionid"
+                        android:tag="LongDescription"
+                        android:maxLength="@{255}"
+                        app:key="LongDescription"
+                        app:value="@={productText.longDescription}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nameid"
+                        android:tag="Name"
+                        app:key="Name"
+                        app:value="@={productText.name}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/productidid"
+                        android:tag="ProductID"
+                        android:maxLength="@{10}"
+                        app:key="ProductID"
+                        app:value="@={Converter.toString(productidid, productText.productID, productText.productID)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shortdescriptionid"
+                        android:tag="ShortDescription"
+                        android:maxLength="@{255}"
+                        app:key="ShortDescription"
+                        app:value="@={productText.shortDescription}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

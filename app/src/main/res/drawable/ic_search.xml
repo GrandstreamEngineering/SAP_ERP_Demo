@@ -1,0 +1,21 @@
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<vector android:height="20dp" android:viewportHeight="49.88"
+    android:viewportWidth="49.87" android:width="20dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#111" android:pathData="M49.14,45.61L38.58,35.05a2.77,2.77 0,0 0,-3.91 0,17.49 17.49,0 1,1 4.92,-16.35 17.7,17.7 0,0 1,-0.18 8.3,2.5 2.5,0 1,0 4.84,1.29 22.54,22.54 0,1 0,-7.72 11.82l9.07,9.06a2.5,2.5 0,0 0,3.54 0,2.5 2.5,0 0,0 0,-3.56z"/>
+    <path android:fillColor="#03A9F4" android:pathData="M30,30a2.46,2.46 0,0 0,-3 -0.27,8.52 8.52,0 0,1 -8.66,0.17 2.41,2.41 0,0 0,-2.87 0.33l-0.15,0.14a2.41,2.41 0,0 0,0.42 3.81,13.55 13.55,0 0,0 14,-0.28 2.41,2.41 0,0 0,0.41 -3.74z"/>
+</vector>

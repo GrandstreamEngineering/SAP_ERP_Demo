@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (c) 2025 Grandstream
+ 
+ Licensed under the Apache License, Version 2.0 (the \"License\");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+   http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an \"AS IS\" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.gs.erp.sap.demo.databinding.simplepropertyformcell.Converter"/>
+        <import type="android.view.View"/>
+        <variable name="purchaseOrderHeader" type="com.sap.cloud.android.odata.com_sap_mbtepmdemoservice.PurchaseOrderHeader"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+        <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_update_purchaseorderheader"
+                    android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/currencycodeid"
+                        android:tag="CurrencyCode"
+                        android:maxLength="@{5}"
+                        app:key="CurrencyCode"
+                        app:value="@={purchaseOrderHeader.currencyCode}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/grossamountid"
+                        android:tag="GrossAmount"
+                        app:key="GrossAmount"
+                        app:value="@={Converter.toString(grossamountid, purchaseOrderHeader.grossAmount, purchaseOrderHeader.grossAmount)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/netamountid"
+                        android:tag="NetAmount"
+                        app:key="NetAmount"
+                        app:value="@={Converter.toString(netamountid, purchaseOrderHeader.netAmount, purchaseOrderHeader.netAmount)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/supplieridid"
+                        android:tag="SupplierID"
+                        android:maxLength="@{10}"
+                        app:key="SupplierID"
+                        app:value="@={Converter.toString(supplieridid, purchaseOrderHeader.supplierID, purchaseOrderHeader.supplierID)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/taxamountid"
+                        android:tag="TaxAmount"
+                        app:key="TaxAmount"
+                        app:value="@={Converter.toString(taxamountid, purchaseOrderHeader.taxAmount, purchaseOrderHeader.taxAmount)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
